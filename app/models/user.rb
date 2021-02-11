@@ -9,5 +9,5 @@ class User < ApplicationRecord
   has_many :dogs, through: :user
 
   validates :first_name, :last_name, :address, presence: true
-  validates :postcode, format: { with: /^([A-Z][A-HJ-Y]?[0-9][A-Z0-9]? ?[0-9][A-Z]{2}|GIR ?0A{2})$/ }
+  validates :postcode, format: { with: /\A([A-Z][A-HJ-Y]?[0-9][A-Z0-9]? ?[0-9][A-Z]{2}|GIR ?0A{2}\z)/ }
 end

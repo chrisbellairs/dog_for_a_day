@@ -1,2 +1,11 @@
 <h1>Dogs#index</h1>
 <p>Find me in app/views/dogs/index.html.erb</p>
+
+<% @dogs.each do |dog| %>
+  <div>
+    <%= link_to dog.name, dog_path(dog) %>
+    <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, dog_path(dog), method: :delete, data: { confirm: "Delete #{dog.name}?" } %>
+  </div>
+<% end %>
+<hr>
+<%= link_to '<i class="fas fa-plus"></i> Add a new dog'.html_safe, new_dog_path %>

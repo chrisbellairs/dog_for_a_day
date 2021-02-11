@@ -1,0 +1,12 @@
+<%= simple_form_for @dog do |f| %>
+  <%= f.input :name %>
+  <%= f.input :biography, as: :text %>
+  <%= f.input :breed %>
+  <%= f.input :age %>
+  <%= f.input :size, as: :range, input_html: { min: 1, max: 10 } %>
+  <%= f.input :good_with_children, as: :radio_buttons, collection: ['Yes', 'No'] %>
+  <%= f.input :walk, as: :range, input_html: { min: 1, max: 10 } %>
+  <%= f.input :energy, as: :range, input_html: { min: 1, max: 10 } %>
+  <%= f.input :friendly, as: :range, input_html: { min: 1, max: 10 } %>
+  <%= f.submit %>
+<% end %>
