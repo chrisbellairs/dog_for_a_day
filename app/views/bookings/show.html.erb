@@ -1,10 +1,10 @@
 <h1>
-  @dog.name
+  <%= @dog.name %>
 </h1>
 <h2>
-  @dog.user.name
+  <%= @dog.user.first_name %>
 </h2>
-<p>@booking.date</p>
+<p><%= @booking.date %></p>
 <%= link_to "Edit", edit_dog_booking_path(@dog, @booking) %><br>
-<%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, dog__booking_path(@dog, @booking),
-    method: :delete, data: { confirm: "Delete your booking with #{dog.name}?" } %>
+<%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, dog_booking_path(@dog, @booking),
+    method: :delete, data: { confirm: "Delete your booking with #{@dog.name}?" } %>
