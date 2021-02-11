@@ -1,6 +1,6 @@
 class Dog < ApplicationRecord
   belongs_to :user
-  has_many :bookings, dependent: :destroy
+  has_many :bookings
 
   validates :name, uniqueness: { scope: :user }
   validates :biography, :breed, :age, :good_with_children, presence: true
