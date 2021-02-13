@@ -1,6 +1,7 @@
 class DogsController < ApplicationController
   def index
     @dogs = Dog.all
+    @sorted_dogs = @dogs.sort_by { |obj| obj.name.downcase }
     @users = User.all
     @markers = @users.geocoded.map do |user|
       {
