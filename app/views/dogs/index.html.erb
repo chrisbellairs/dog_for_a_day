@@ -2,6 +2,10 @@
 <p>Find me in app/views/dogs/index.html.erb</p>
 
 <% @dogs.each do |dog| %>
+  <div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   <div>
     <%= link_to dog.name, dog_path(dog) %>
     <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, dog_path(dog), method: :delete, data: { confirm: "Delete #{dog.name}?" } %>
