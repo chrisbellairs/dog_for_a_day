@@ -27,14 +27,17 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
 })
 // External imports
+import JQuery from 'jquery';
+window.$ = window.JQuery = JQuery;
 import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import "../plugins/flatpickr"
+// import "../plugins/flatpickr"
+ import flatpickr from "flatpickr";
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
-  // initSelect2();
+  // initSelect2()
   flatpickr(".datepicker", {});
 });

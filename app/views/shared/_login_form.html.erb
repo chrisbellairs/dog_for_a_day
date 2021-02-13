@@ -1,3 +1,4 @@
+
 <div class="modal" id="signInModal" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -8,7 +9,8 @@
         </button>
       </div>
       <div class="modal-body">
-        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="errors"></div>
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), remote: true) do |f| %>
           <div class="form-inputs">
             <%= f.input :email,
                         required: false,
@@ -19,15 +21,14 @@
                         input_html: { autocomplete: "current-password" } %>
             <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
           </div>
-      </div>
-        <div class="modal-footer">
           <div class="form-actions">
-            <%= f.button :submit, "Log in" %>
+            <%= f.button :submit, "Log in", class: "btn btn-primary btn-login" %>
           </div>
+      </div>
+        <div class="modal-footer links-stacked">
+          <%= render "devise/shared/links" %>
         <% end %>
         </div>
       </div>
     </div>
   </div>
-
-<%= render "devise/shared/links" %>
