@@ -6,8 +6,10 @@ class User < ApplicationRecord
 
   has_many :dogs, dependent: :destroy
   has_many :bookings, dependent: :destroy
-  has_many :dogs, through: :user
+  
   has_one_attached :photo
+
+
 
   validates :first_name, :last_name, :address, presence: true
   validates :postcode, format: { with: /\A([A-Z][A-HJ-Y]?[0-9][A-Z0-9]? ?[0-9][A-Z]{2}|GIR ?0A{2}\z)/ }
