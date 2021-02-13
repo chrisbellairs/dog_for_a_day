@@ -21,11 +21,12 @@
                         input_html: { autocomplete: "current-password" } %>
             <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
           </div>
-      </div>
-        <div class="modal-footer">
           <div class="form-actions">
-            <%= f.button :submit, "Log in" %>
+            <%= f.button :submit, "Log in", class: "btn btn-primary btn-login" %>
           </div>
+      </div>
+        <div class="modal-footer links-stacked">
+          <%= render "devise/shared/links" %>
         <% end %>
         </div>
       </div>
