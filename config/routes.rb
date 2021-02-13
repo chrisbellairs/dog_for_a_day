@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/pages', to: 'pages#account'
+
   resources :dogs do
     resources :bookings, except: [:index]
   end
