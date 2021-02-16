@@ -37,10 +37,9 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", "", data: {toggle: "modal", target: "#signInModal"} %>
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
         </li>
       <% end %>
     </ul>
   </div>
 </div>
-<%= render 'shared/login_form' %>
