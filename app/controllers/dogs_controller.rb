@@ -1,6 +1,15 @@
 class DogsController < ApplicationController
   def index
-    @dogs = Dog.all
+    sql_query = " \
+            dogs.breed ILIKE :query \
+            OR users.address ILIKE :query"
+
+    if params[:query].present?
+      @dogs = Dog.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @dogs = Dog.all
+    end
+
     @users = User.all
     @markers = @users.geocoded.map do |user|
       {
