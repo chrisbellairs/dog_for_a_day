@@ -21,6 +21,17 @@
                 hint: "we need your current password to confirm your changes",
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
+    <%= f.input :first_name,
+                required: true,
+                input_html: { autocomplete: "First name" } %>
+    <%= f.input :last_name,
+                required: true,
+                input_html: { autocomplete: "Last name" } %>
+    <%= f.input :address,
+                required: true,
+                input_html: { autocomplete: "Address" } %>
+    <%= f.input :terms_and_conditions, as: :boolean
+                required: true %>
   </div>
 
   <div class="form-actions">

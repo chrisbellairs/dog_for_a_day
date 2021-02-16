@@ -1,4 +1,9 @@
-<h2>Sign up</h2>
+<div class="container">
+
+<div class="login-form">
+  <div class="login-form-heading">
+    <h3>Create An Account</h3>
+  </div>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -24,14 +29,15 @@
     <%= f.input :address,
                 required: true,
                 input_html: { autocomplete: "Address" } %>
-    <%= f.input :terms_and_conditions, as: :boolean
-                required: true,
-                input_html: { autocomplete: "Postcode" } %>
+    <%= f.input :terms_and_conditions, as: :boolean,
+                required: true %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Create Account", class: "btn-login" %>
   </div>
 <% end %>
+</div>
+</div>
 
 <%= render "devise/shared/links" %>
