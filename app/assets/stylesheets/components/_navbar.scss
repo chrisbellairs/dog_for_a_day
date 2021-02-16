@@ -13,6 +13,10 @@
   flex-grow: 0;
 }
 
-.not-logged-in {
+.navbar-list {
+  display: flex;
+}
+
+.navbar-list-item {
   display: flex;
 }

@@ -12,9 +12,9 @@
           <% end %>
         </li>
       <% if user_signed_in? %>
-      
+        <div><%= link_to "Register your dog", new_user_session_path %></div>
       <% else %>
-        <li>
+        <li class="navbar-list-item">
           <div><%= link_to "Register your dog", new_user_session_path %></div>
           <div><%= link_to "Login", new_user_session_path %></div>
         </li>
