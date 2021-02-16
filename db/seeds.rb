@@ -17,10 +17,9 @@ puts "database cleaned"
     last_name: Faker::Name.last_name,
     email: Faker::Internet.email,
     password: "password",
-    address: ['15, bartlett close','2 kings grove','32, Astbury Road', '50, Vectis Road', '136, Robinson Road','Scald End Farm, Mill Road, Thurliegh', '17, Ulundi Road, London'].sample,
-    postcode: "TQ8 6GF"
+    address: ['15, bartlett close','2 kings grove','32, Astbury Road', '50, Vectis Road','Scald End Farm, Mill Road, Thurleigh', '17, Ulundi Road, London'].sample,
   )
-  
+
   image_data = URI.open('https://res.cloudinary.com/drrp7b8nl/image/upload/v1613231666/keppgkui0p58gqxn2ufi.jpg')
 
   dog = Dog.new(
