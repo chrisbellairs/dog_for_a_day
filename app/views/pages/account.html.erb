@@ -12,7 +12,7 @@
       <ul>
         <% dog.bookings.each do |booking| %>
           <li>
-            <%= booking.date %>
+            <%= booking.date %> <%= link_to "View this booking", dog_booking_path(dog, booking) %>
           </li>
         <% end %>
       </ul>
@@ -26,7 +26,7 @@
 <ul>
   <% current_user.bookings.each do |booking| %>
     <li>
-      <%= booking.dog.name %> on <%= booking.date %> from <%= booking.dog.user.first_name %>
+      <%= booking.dog.name %> on <%= booking.date %> from <%= booking.dog.user.first_name %> <%= link_to "View this booking", dog_booking_path(booking.dog, booking) %>
     </li>
   <% end %>
 </ul>
