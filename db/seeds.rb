@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
 Booking.destroy_all
 User.destroy_all
 Dog.destroy_all
@@ -19,8 +20,10 @@ puts "database cleaned"
     address: ['15, bartlett close','2 kings grove','32, Astbury Road', '50, Vectis Road', '136, Robinson Road','Scald End Farm, Mill Road, Thurliegh', '17, Ulundi Road, London'].sample,
     postcode: "TQ8 6GF"
   )
+  
+  image_data = URI.open('https://res.cloudinary.com/drrp7b8nl/image/upload/v1613231666/keppgkui0p58gqxn2ufi.jpg')
 
-  Dog.create!(
+  dog = Dog.new(
     name: Faker::Creature::Dog.name,
     breed: Faker::Creature::Dog.breed,
     biography: "Is a good boy/girl",
@@ -32,6 +35,8 @@ puts "database cleaned"
     friendly: (1..10).to_a.sample,
     user: user
   )
+  dog.photo.attach(io: image_data, filename: 'image.jpg', content_type: 'image/jpg')
+  dog.save!
 end
 
 puts "Created #{User.all.count} users."
