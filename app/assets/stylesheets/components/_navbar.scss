@@ -1,22 +1,10 @@
-.navbar {
+.navbar-lewagon {
   justify-content: space-between;
   background: #16C79A;
-  color: #ffffff;
 }
-
-.navbar h1 {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.navbar .navbar-collapse {
+.navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
-
-.navbar-list {
-  display: flex;
-}
-
-.navbar-list-item {
-  display: flex;
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
 }
