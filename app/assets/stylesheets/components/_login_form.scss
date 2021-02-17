@@ -1,10 +1,13 @@
 .login-form {
   width: 475px;
-  height: 100%;
+  height: auto;
   padding: 33px;
   box-shadow: 1px 1px 10px rgba(0,0,0,0.25);
   background-color: #FFF;
   border-radius: 4px;
+  position: absolute;
+  left: -267px;
+  margin: 0 30px;
 }
 
 .form-actions {
@@ -21,4 +24,21 @@
     font-weight: bold;
     font-size: 18px;
   }
+}
+
+
+.login-background {
+  width: 60%;
+  height: 921px;
+  float: right;
+  background-color: #16C79A;
+  position: relative;
+  margin-top: 40px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.25);
+  padding: 70px 30px;
+  display: flex;
+}
+
+.login-text {
 }
