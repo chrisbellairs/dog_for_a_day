@@ -1,12 +1,70 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #16C79A;
+  align-items: center;
 }
-
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
-
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar {
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+
+
+/* navnbar buttons CSS */
+
+#reg-dog-btn {
+  background: #16C79A;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 20px;
+
+  font-family: Montserrat;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+
+  margin: 0 6px;
+
+  &:hover {
+    background: #FFFFFF;
+    a {
+      color: #16C79A;
+    }
+  }
+}
+
+#login-btn {
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 17px;
+
+  a {
+    color: #16C79A;
+  }
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+
+  width: 76px;
+  height: 34px;
+  margin: 0 6px;
+  
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
