@@ -1,0 +1,11 @@
+<h1>My Account</h1>
+
+<%= link_to "Dashboard", pages_path %>
+<%= link_to "My Dogs", pages_my_dogs_path %>
+<%= link_to "My Bookings", pages_my_bookings_path %>
+<%= link_to "Account", pages_my_account_path %><br>
+
+<%= current_user.first_name %> <%= current_user.last_name %><br>
+<%= current_user.email %><br>
+<%= current_user.address %><br>
+<%= link_to "Edit Account", edit_user_registration_path %>
