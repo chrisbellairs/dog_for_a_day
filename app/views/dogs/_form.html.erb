@@ -7,7 +7,7 @@
       <%= simple_form_for @dog do |f| %>
       <div class="form-inputs">
         <%= f.input :name %>
-        <%= f.input :photo, as: :file %>
+        <%= f.input :photo, as: :file, label_html: { class: "dog-image-upload" } %>
         <%= f.input :biography, as: :text %>
         <%= f.input :breed %>
         <%= f.input :age %>
