@@ -35,9 +35,10 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 // import "../plugins/flatpickr"
  import flatpickr from "flatpickr";
-
+ import {initAutocomplete} from "../plugins/init_autocomplete"
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2()
+  initAutocomplete()
   flatpickr(".datepicker", {});
 });
