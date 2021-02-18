@@ -10,9 +10,14 @@ class DogsController < ApplicationController
       @dogs = Dog.all
     end
 
-    @users = User.all
-    @markers = @users.geocoded.map do |user|
-      {
+    @users = @dogs.map(&:user)
+
+    @markers = []
+
+    @users.each do |user|
+      next unless user.geocoded?
+
+      @markers << {
         lat: user.latitude,
         lng: user.longitude
       }
