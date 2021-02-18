@@ -1,35 +1,47 @@
-<h2>Sign up</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :first_name,
-                required: true,
-                input_html: { autocomplete: "First name" } %>
-    <%= f.input :last_name,
-                required: true,
-                input_html: { autocomplete: "Last name" } %>
-    <%= f.input :address,
-                required: true,
-                input_html: { autocomplete: "Address" } %>
-    <%= f.input :terms_and_conditions, as: :boolean%>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+<div class="container">
+  <div class="create-background">
+    <div class="create-form">
+      <div class="login-form-heading">
+        <h3>Create an Account</h3>
+      </div>
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
+        <div class="form-inputs">
+          <%= f.input :email,
+                      required: false,
+                      label: 'Email:',
+                      autofocus: true,
+                      input_html: { autocomplete: "email" }%>
+          <%= f.input :password,
+                      required: false,
+                      label: 'Password:',
+                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :password_confirmation,
+                      required: false,
+                      label: 'Confirm Password:',
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :first_name,
+                      required: false,
+                      label: 'First Name:',
+                      input_html: { autocomplete: "First name" } %>
+          <%= f.input :last_name,
+                      required: false,
+                      label: 'Last Name:',
+                      input_html: { autocomplete: "Last name" } %>
+          <%= f.input :address,
+                      required: false,
+                      label: 'Address:',
+                      input_html: { autocomplete: "Address" } %>
+          <%= f.input :terms_and_conditions, label: 'Please accept the terms and conditions', as: :boolean,
+                      required: false %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, "Create Account", class: "btn-login" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="login-text">
+      <h2>Why become a member?</h2>
+      <p>At dog for a day we allow you to spend time with the best canine company. All the dogs on here are owned by people like you, and so we require some inforation to make the connection between you.<br><br>By becoming a member you can:</p>
+    </div>
