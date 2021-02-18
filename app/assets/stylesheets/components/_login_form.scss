@@ -1,13 +1,48 @@
 .login-form {
-  width: 475px;
+  margin: 50px auto;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.25);
+  background-color: #FFF;
+  border-radius: 4px;
+  width: 50%;
+   .form-inputs {
+    padding: 0px 33px;
+  }
+  .form-actions {
+    padding: 0px 33px 20px;
+  }
+}
+
+.login-background {
+  width: 60%;
+  height: 921px;
+  float: right;
+  background-color: #16C79A;
+  position: relative;
+  margin-top: 40px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.25);
+  padding: 70px 30px;
+  display: flex;
+  overflow: visible;
+}
+
+.create-form {
+  width: 70%;
   height: auto;
-  padding: 33px;
+
   box-shadow: 1px 1px 10px rgba(0,0,0,0.25);
   background-color: #FFF;
   border-radius: 4px;
   position: absolute;
-  left: -267px;
+  left: -40%;
   margin: 0 30px;
+
+  .form-inputs {
+    padding: 0px 33px;
+  }
+  .form-actions {
+    padding: 0px 33px 20px;
+  }
 }
 
 .form-actions {
@@ -27,7 +62,7 @@
 }
 
 
-.login-background {
+.create-background {
   width: 60%;
   height: 921px;
   float: right;
@@ -38,7 +73,31 @@
   box-shadow: 1px 1px 10px rgba(0,0,0,0.25);
   padding: 70px 30px;
   display: flex;
+  overflow: visible;
+  :after {
+    content: " ";
+  }
 }
 
 .login-text {
+  width: 55%;
+  right: 30px;
+  position: absolute;
+  // text-align: left;
+  h2, p {
+    color: #FFF;
+  }
+}
+
+.login-form-heading {
+  text-align: center;
+  background-color: #FF6912;
+  padding: 16px;
+  color: #FFF;
+  margin-bottom: 16px;
+  border-radius: 4px 4px 0px 0px;
+
+  h3 {
+    margin: 0 auto;
+  }
 }
