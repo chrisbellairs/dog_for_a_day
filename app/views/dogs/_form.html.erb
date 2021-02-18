@@ -1,13 +1,46 @@
-<%= simple_form_for @dog do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo, as: :file %>
-  <%= f.input :biography, as: :text %>
-  <%= f.input :breed %>
-  <%= f.input :age %>
-  <%= f.input :size, as: :range, input_html: { min: 1, max: 10 } %>
-  <%= f.input :good_with_children, as: :radio_buttons, collection: ['Yes', 'No'] %>
-  <%= f.input :walk, as: :range, input_html: { min: 1, max: 10 } %>
-  <%= f.input :energy, as: :range, input_html: { min: 1, max: 10 } %>
-  <%= f.input :friendly, as: :range, input_html: { min: 1, max: 10 } %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="create-dog-background">
+    <div class="create-dog-form">
+      <div class="login-form-heading">
+        <h3>Register Your Dog</h3>
+      </div>
+      <%= simple_form_for @dog do |f| %>
+      <div class="form-inputs">
+        <%= f.input :name %>
+        <%= f.input :photo, as: :file %>
+        <%= f.input :biography, as: :text %>
+        <%= f.input :breed %>
+        <%= f.input :age %>
+        <%= f.input :size, label: "How big is your dog?", as: :range, input_html: { min: 1, max: 10, class: "slider" }, required: false %>
+        <div class="dog-slider-labels">
+          <div class="label 1"><p>Small</p></div>
+          <div class="label 2"><p>Medium</p></div>
+          <div class="label 3"><p>Large</p></div>
+        </div>
+        <%= f.input :walk, label: "What length of walk does your dog like?", as: :range, input_html: { min: 1, max: 10, class: "slider" }, required: false %>
+        <div class="dog-slider-labels">
+          <div class="label 1"><p>10 mins</p></div>
+          <div class="label 2"><p>1 hour</p></div>
+          <div class="label 3"><p>2 hours +</p></div>
+        </div>
+        <%= f.input :energy, label: "How much energy does your dog have?", as: :range, input_html: { min: 1, max: 10, class: "slider" }, required: false %>
+        <div class="dog-slider-labels">
+          <div class="label 1"><p>Sleepy</p></div>
+          <div class="label 2"><p>Ready to play or sit</p></div>
+          <div class="label 3"><p>Needs attention</p></div>
+        </div>
+        <%= f.input :friendly, label: "How much energy does your dog have?", as: :range, input_html: { min: 1, max: 10, class: "slider" }, required: false %>
+        <div class="dog-slider-labels">
+          <div class="label 1"><p>Stay away from others!</p></div>
+          <div class="label 2"><p>Not sure</p></div>
+          <div class="label 3"><p>A natural socialite</p></div>
+        </div>
+        <%= f.input :good_with_children, as: :radio_buttons, collection: ['Yes', 'No'] %>
+      </div>
+      <div class="form-actions">
+        <%= f.button :submit, "Register Your Dog", class: "btn-login" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
