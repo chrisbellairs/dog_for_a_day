@@ -4,6 +4,9 @@
   background-color: #FFF;
   border-radius: 4px;
   width: 475px;
+  z-index: 1;
+  position: relative;
+  top: -50px;
    .form-inputs {
     padding: 0px 33px;
   }
@@ -16,8 +19,11 @@
   background-color: #16C79A;
   border-radius: 4px;
   box-shadow: 1px 1px 10px rgba(0,0,0,0.25);
-  margin: 40px auto;
-  width: 80%
+  margin: 100px auto;
+  width: 80%;
+  z-index: 0;
+  height: 350px;
+  padding-bottom: 50px;
 }
 
 .login-links {
@@ -46,23 +52,6 @@
     padding: 0px 33px 20px;
   }
 }
-
-.form-actions {
-  input {
-    width: 100%;
-    background-color: #16C79A;
-    text-align: center;
-    border-radius: 4px;
-  }
-
-  .btn-login {
-    padding: 21px 0;
-    color: #FFF;
-    font-weight: bold;
-    font-size: 18px;
-  }
-}
-
 
 .create-background {
   width: 60%;
@@ -101,5 +90,21 @@
 
   h3 {
     margin: 0 auto;
+  }
+}
+
+.form-actions {
+  input {
+    width: 100%;
+    background-color: #16C79A;
+    text-align: center;
+    border-radius: 4px;
+  }
+
+  .btn-login {
+    padding: 21px 0;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 18px;
   }
 }
