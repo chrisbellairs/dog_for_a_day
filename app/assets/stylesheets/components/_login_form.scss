@@ -1,9 +1,9 @@
 .login-form {
-  margin: 50px auto;
+  margin: 0 auto;
   box-shadow: 1px 1px 10px rgba(0,0,0,0.25);
   background-color: #FFF;
   border-radius: 4px;
-  width: 50%;
+  width: 475px;
    .form-inputs {
     padding: 0px 33px;
   }
@@ -13,17 +13,19 @@
 }
 
 .login-background {
-  width: 60%;
-  height: 921px;
-  float: right;
   background-color: #16C79A;
-  position: relative;
-  margin-top: 40px;
   border-radius: 4px;
   box-shadow: 1px 1px 10px rgba(0,0,0,0.25);
-  padding: 70px 30px;
-  display: flex;
-  overflow: visible;
+  margin: 40px auto;
+  width: 80%
+}
+
+.login-links {
+  padding: 0px 33px 20px;
+  a {
+    // text-decoration: underline;
+    color: #000
+  }
 }
 
 .create-form {
