@@ -27,7 +27,7 @@ class Dog < ApplicationRecord
     if self.size < 4
       "Small dog"
     elsif self.size < 7
-      "Medium god"
+      "Medium dog"
     else
       "Large dog"
     end
