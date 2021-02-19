@@ -1,13 +1,19 @@
-.navbar-lewagon {
+.navbar-dfad {
   justify-content: space-between;
-  background: #16C79A;
+  background: $base;
   align-items: center;
+  height: 54px;
 }
-.navbar-lewagon .navbar-collapse {
+.navbar-dfad .navbar-collapse {
   flex-grow: 0;
 }
-.navbar-lewagon .navbar-brand img {
+.avatar {
   width: 40px;
+  margin: 0px 6px;
+}
+
+.nav-icon {
+  color: white;
 }
 
 .navbar {
@@ -17,11 +23,51 @@
   }
 }
 
+#query {
+  width: 462px;
+  height: 40px;
 
-/* navnbar buttons CSS */
+  background: #FFFFFF;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border-color: white;
+  z-index: 1;
+}
+
+.dropdown-menu {
+  border-radius: 4px;
+  a {
+    color: $dark-grey;
+  }
+}
+/* Navbar buttons */
+
+.search-btn {
+  background: $base;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 20px;
+
+  font-family: Montserrat;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+
+  margin: 0 6px;
+
+  &:hover {
+    background: #FFFFFF;
+    color: $base;
+  }
+}
+
+#navbarDropdown {
+  color: #FFFFFF;
+}
 
 #reg-dog-btn {
-  background: #16C79A;
+  background: $base;
   border: 1px solid #FFFFFF;
   box-sizing: border-box;
   border-radius: 20px;
@@ -37,7 +83,7 @@
   &:hover {
     background: #FFFFFF;
     a {
-      color: #16C79A;
+      color: $base;
     }
   }
 }
@@ -46,25 +92,21 @@
   background: #FFFFFF;
   border: 1px solid #FFFFFF;
   box-sizing: border-box;
-  border-radius: 17px;
+  border-radius: 20px;
 
   a {
-    color: #16C79A;
+    color: $base;
   }
 
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  line-height: 22px;
-
-  width: 76px;
-  height: 34px;
   margin: 0 6px;
-  
-  transition: all 0.2s ease-in-out;
 
   &:hover {
-    transform: scale(1.1);
+    a {
+      color: $accent;
+    }
   }
 }
