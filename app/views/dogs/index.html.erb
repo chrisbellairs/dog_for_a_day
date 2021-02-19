@@ -4,12 +4,16 @@
       <div class="index-card">
         <div>
           <% if dog.photo.attached? %>
-            <div><%= cl_image_tag dog.photo.key, height: 180, width: 270, crop: :fill %></div>
+            <div>
+              <%= link_to dog_path(dog) do %>
+                <%= cl_image_tag dog.photo.key, height: 180, width: 270, crop: :fill %>
+              <% end %>
+            </div>
           <% end %>
         </div>
         <div>
           <h2>
-            <%= dog.name %>
+            <%= link_to dog.name, dog_path(dog) %>
           </h2>
           <p>
             <%= dog.biography[0..63] %>

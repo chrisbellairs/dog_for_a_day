@@ -1,6 +1,7 @@
 .index-container {
   display: grid;
   grid-template-columns: 3fr 2fr;
+  grid-gap: 16px;
   padding: 16px 150px 16px;
 }
 

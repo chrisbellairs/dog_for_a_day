@@ -16,7 +16,6 @@ class DogsController < ApplicationController
         lng: dog.longitude,
         infoWindow: render_to_string(partial: "infowindow", locals: { dog: dog })
       }
-
     end
   end
 
