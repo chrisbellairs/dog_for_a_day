@@ -12,12 +12,13 @@ Dog.destroy_all
 puts "database cleaned"
 
 20.times do
-  user = User.create(
+  user = User.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: Faker::Internet.email,
     password: "password",
     address: ['15, bartlett close','2 kings grove','32, Astbury Road', '50, Vectis Road','Scald End Farm, Mill Road, Thurleigh', '17, Ulundi Road, London'].sample,
+    terms_and_conditions: true
   )
 
   image_data = URI.open('https://res.cloudinary.com/drrp7b8nl/image/upload/v1613231666/keppgkui0p58gqxn2ufi.jpg')
@@ -32,7 +33,8 @@ puts "database cleaned"
     walk: (1..10).to_a.sample,
     energy: (1..10).to_a.sample,
     friendly: (1..10).to_a.sample,
-    user: user
+    user: user,
+    address: user.address
   )
   dog.photo.attach(io: image_data, filename: 'image.jpg', content_type: 'image/jpg')
   dog.save!
