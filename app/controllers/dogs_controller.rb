@@ -10,14 +10,27 @@ class DogsController < ApplicationController
       @dogs = Dog.all
     end
 
-    @markers = Dog.all.geocoded.map do |dog|
-      {
-        lat: dog.latitude,
-        lng: dog.longitude,
-        infoWindow: render_to_string(partial: "infowindow", locals: { dog: dog })
-      }
-
+    users = @dogs.map do |dog|
+      [dog.user, dog]
     end
+
+    @markers = []
+
+    users.each do |user|
+      @markers << {
+        lat: user[0].latitude,
+        lng: user[0].longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { dog: user[1] })
+      }
+    end
+
+    # @markers = Dog.all.geocoded.map do |dog|
+    #   {
+    #     lat: dog.latitude,
+    #     lng: dog.longitude,
+    #     infoWindow: render_to_string(partial: "infowindow", locals: { dog: dog })
+    #   }
+    # end
   end
 
   def new

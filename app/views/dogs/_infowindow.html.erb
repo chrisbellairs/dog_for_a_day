@@ -1,2 +1,20 @@
-<h2><%= dog.name %></h2>
-<p><%= dog.address %></p>
+<% if dog.photo.attached? %>
+  <div class="#">
+      <%= cl_image_tag dog.photo.key, height: 180, width: 270, crop: :fill %>
+  </div>
+<% end %>
+<div class="mapboxgl-popup-content-stats">
+  <div>
+    <h2>
+      <%= link_to dog_path(dog) do %>
+        <%= dog.name %>
+      <% end %>
+    </h2>
+    <span><%= dog.user.address %></span>
+  </div>
+  <div class="breed-stat">
+    <i class="fas fa-dog"></i><br>
+    <%= dog.breed %>
+  </div>
+</div>
+
