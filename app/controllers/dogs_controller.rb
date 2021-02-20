@@ -23,7 +23,6 @@ class DogsController < ApplicationController
         infoWindow: render_to_string(partial: "infowindow", locals: { dog: user[1] })
       }
     end
-
     # @markers = Dog.all.geocoded.map do |dog|
     #   {
     #     lat: dog.latitude,
