@@ -1,4 +1,9 @@
-<h1>Dogs#new</h1>
-<p>Find me in app/views/dogs/new.html.erb</p>
-<h1>New Dog</h1>
-<%= render 'form' %>
+<div class="container">
+  <div class="user-dog-card">
+    <h2>Hi <%= current_user.first_name %></h2>
+    <p>We care about matching personalities together, pup and person, so we need to take some information about your dog.</p>
+    <br>
+    <p>Whatever your reason for finding yourself here, be it needing a dog walker, someone to  look after the dogs when you go away or just wanting to bring some joy to those without a four legged friend, it all starts here.</p>
+  </div>
+  <%= render 'form' %>
+</div>
