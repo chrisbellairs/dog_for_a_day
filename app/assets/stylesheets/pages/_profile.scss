@@ -15,13 +15,19 @@
   box-shadow: 0 0 5px;
 }
 
+.box_container {
+  text-align: left;
+  padding: 5px 5px;
+
+}
+
 .btn-primary {
   display: inline-block;
-  background-color: #16C79A;
+  background-color: #ff6912;
   padding: 16px 36px;
   border-radius: 50px;
   color: white;
-  &:hover {background-color: #16C79A}
+  &:hover {background-color: #ff6912}
   a{text-decoration: none;
     color: white;}
 }

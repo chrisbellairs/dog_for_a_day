@@ -10,9 +10,12 @@
     <div class="container">
       <div class="account_details">
       <h2>Your Account Details</h2>
-        <div><%= current_user.first_name%> <%= current_user.last_name %><br></div>
-        <div><%= current_user.email %><br></div>
-        <div><%= current_user.address %><br></div>
+        <div class='box_container'>Biography:
+                                    You don't have anything added :(</div>
+        <div class='box_container'>First Name:  <%= current_user.first_name%></div>
+        <div class='box_container'>Last Name:  <%= current_user.last_name %><br></div>
+        <div class='box_container'>Email Address: <%= current_user.email %><br></div>
+        <div class='box_container'>Address: <%= current_user.address %><br></div>
           <div class="btn-primary">
           <div class="edit_account"><%= link_to "Edit Account", edit_user_registration_path %></div>
           </div>
