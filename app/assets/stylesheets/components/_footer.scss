@@ -13,6 +13,10 @@
 .sm-icon {
   padding: 0 6px;
   color: #FFFFFF;
+
+  &:hover {
+    color: $accent;
+  }
 }
 
 #footer-icons {
