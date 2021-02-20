@@ -1,10 +1,30 @@
-<h1>Dogs#show</h1>
-<p>Find me in app/views/dogs/show.html.erb</p>
-
+<div class="container">
+<div class="dog-show-heading">
 <h1><%= @dog.name %></h1>
+<p class="dog-address"><%= @dog.user.address %></p>
+</div>
 <% if @dog.photo.attached? %>
-  <div><%= cl_image_tag @dog.photo.key, height: 300, width: 400, crop: :fill %></div>
+  <div class="dog-image"><%= cl_image_tag @dog.photo.key, height: 800, width: 1140, crop: :fill %></div>
 <% end %>
-<p><%= @dog.breed %></p>
-<div><%= link_to "Book this dog", new_dog_booking_path(@dog) %></div>
-<div><%= link_to "Edit this dog", edit_dog_path %>
+<div class="row">
+<div class="dog-bio-heading col-8">
+  <hr>
+  <p><%= @dog.biography %></p>
+  <p>Offered by <%= @dog.user.first_name %></p>
+  <hr>
+  <div class="dog-stats">
+    <div>
+    <div class=""><i class="fas fa-dog"></i> Breed: <%= @dog.breed %></div>
+    <div><i class="fas fa-birthday-cake"></i> Age: <%= @dog.age %></div>
+    <div><i class="fas fa-ruler-horizontal"></i> Size: <%= @dog.dog_size %></div>
+    <div><i class="fas fa-shoe-prints"></i> Length of walk preference: <%= @dog.walk_length %></div>
+    <div><i class="fas fa-bolt"></i> Energy level: <%= @dog.dog_energy %></div>
+    <div><i class="fas fa-users"></i> Friendliness: <%= @dog.dog_friendly %></div>
+    <div><i class="fas fa-child"></i> Good with children? <%= @dog.dog_gwc %></div>
+  </div>
+</div>
+<div class="col-4 book">
+  <%= link_to "Book this dog", new_dog_booking_path(@dog) %>
+</div>
+
+</div>
