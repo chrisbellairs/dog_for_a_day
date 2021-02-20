@@ -12,10 +12,6 @@
   margin: 0px 6px;
 }
 
-.nav-icon {
-  color: white;
-}
-
 .navbar {
   a {
     color: #ffffff;
@@ -60,9 +56,14 @@
     color: $base;
   }
 }
-
+.nav-icon {
+  color: #FFFFFF;
+}
 #navbarDropdown {
   color: #FFFFFF;
+  &:hover {
+    color: $accent;
+  }
 }
 
 #reg-dog-btn {
