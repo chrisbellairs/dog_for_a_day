@@ -164,7 +164,7 @@ image_data = URI.open('https://res.cloudinary.com/drrp7b8nl/image/upload/v161382
 
 dog_6 = Dog.new(
   name: "Heidi",
-  breed: "King Charles Spaniel",
+  breed: "King Charles",
   biography: "Heidi is a rescue dog and I've had her for 3 years. What makes Heidi happy is she loves her walks and playing with toys. She's an active, obedient and affectionate little dog.",
   age: (1..15).to_a.sample,
   good_with_children: true,
@@ -248,7 +248,7 @@ image_data = URI.open('https://res.cloudinary.com/drrp7b8nl/image/upload/v161382
 
 dog_9 = Dog.new(
   name: Faker::Creature::Dog.name,
-  breed: "Chiwawa",
+  breed: "Chihuahua",
   biography: "She is a lap dog and loves cuddles and will do anything for a treat ! She enjoys walks and meeting other dogs",
   age: 2,
   good_with_children: true,

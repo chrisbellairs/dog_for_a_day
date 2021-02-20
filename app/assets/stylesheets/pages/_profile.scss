@@ -1,0 +1,70 @@
+.h1 {
+  border-bottom: 2px solid;
+  text-align: center;
+}
+
+.account_page_styling{
+  display: flex;
+}
+.account_card {
+  background-color: #16C79A;
+  width: 250px;
+  height: 400px;
+  padding: 200px, 200px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px;
+}
+
+.box_container {
+  text-align: left;
+  padding: 5px 5px;
+
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #ff6912;
+  padding: 16px 36px;
+  border-radius: 50px;
+  color: white;
+  &:hover {background-color: #ff6912}
+  a{text-decoration: none;
+    color: white;}
+}
+
+#is_active{color:white; }
+
+.user_navigation {
+  color: white;
+  padding: 8px 20px;
+  text-align: left;
+  &:hover {background-color: #ff975b}
+  a{text-decoration: none;
+    color: white;}
+}
+
+#is_active{background-color: #ff6912}
+
+.account_details {
+  background-color: white;
+  width: 500px;
+  height: 400px;
+  padding: 200px, 200px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px;
+  text-align: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  margin: 0 6px;
+}
+
+.edit_account {
+  text-align: center;
+}
+
+.underline {
+  border-bottom: 2px solid black;
+  width: 750px;
+}
