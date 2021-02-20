@@ -16,7 +16,7 @@ user_1 = User.create!(
   last_name: "Bellairs",
   email: "c.m.bellairs@gmail.com",
   password: "password",
-  address: "West Street, London, SW86 2RQ",
+  address: "West Street, London",
   terms_and_conditions: true
 )
 
@@ -44,7 +44,7 @@ user_2 = User.create!(
   last_name: "Woods",
   email: "woodsmj17@gmail.com",
   password: "password",
-  address: "Park Road, London, SW56 0XE",
+  address: "Park Road, London",
   terms_and_conditions: true
 )
 
@@ -72,7 +72,7 @@ user_3 = User.create!(
   last_name: "Towler",
   email: "felicity@scaldendfarm.com",
   password: "password",
-  address: "Main Road, London, SW07 8JW",
+  address: "Main Road, London",
   terms_and_conditions: true
 )
 
@@ -100,7 +100,7 @@ user_4 = User.create!(
   last_name: "Fryer",
   email: "freddiefryercode@gmail.com",
   password: "password",
-  address: "New Road, London, EC04 1ME",
+  address: "New Road, London",
   terms_and_conditions: true
 )
 
@@ -128,7 +128,7 @@ user_5 = User.create!(
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   password: "password",
-  address: "Broadway, London, SW03 1BQ",
+  address: "Broadway, London",
   terms_and_conditions: true
 )
 
@@ -156,7 +156,7 @@ user_6 = User.create!(
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   password: "password",
-  address: "The Grove, London, W06 1NC",
+  address: "The Grove, London",
   terms_and_conditions: true
 )
 
@@ -184,7 +184,7 @@ user_7 = User.create!(
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   password: "password",
-  address: "Victoria Road, London, W41 6BZ",
+  address: "Victoria Road, London",
   terms_and_conditions: true
 )
 
@@ -212,7 +212,7 @@ user_8 = User.create!(
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   password: "password",
-  address: "Grove Road, London, E43 9YA",
+  address: "Grove Road, London",
   terms_and_conditions: true
 )
 
@@ -240,7 +240,7 @@ user_9 = User.create!(
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   password: "password",
-  address: "Grange Road, London, NW34 2JQ",
+  address: "Grange Road, London",
   terms_and_conditions: true
 )
 
@@ -268,7 +268,7 @@ user_10 = User.create!(
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   password: "password",
-  address: "Alexander Road, London, W06 7EK",
+  address: "Alexander Road, London",
   terms_and_conditions: true
 )
 
@@ -296,7 +296,7 @@ user_11 = User.create!(
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   password: "password",
-  address: "Queensway, London, W15 6XD",
+  address: "Queensway, London",
   terms_and_conditions: true
 )
 
@@ -324,7 +324,7 @@ user_12 = User.create!(
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   password: "password",
-  address: "Park Avenue, London, N68 7UF",
+  address: "Park Avenue, London",
   terms_and_conditions: true
 )
 
