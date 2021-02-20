@@ -37,7 +37,8 @@
         <li class="nav-item">
           <%= form_tag dogs_path, method: :get do %>
             <%= text_field_tag :query,
-                params[:query]
+                params[:query],
+                placeholder: "  Enter you city"
             %>
             <%= submit_tag "Search", class: "btn search-btn" %>
           <% end %>
