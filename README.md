@@ -9,8 +9,6 @@ An dog rental application for those who love dogs but hate commitment.
   - [As a dog renter](#as-a-dog-renter)
     - [Searching for a dog to spend some time with](#searching-for-a-dog-to-spend-time-with)
     - [Booking a dog](#booking-a-dog)
-    - [Cancelling a spot at an event](#cancelling-a-spot-at-an-event)
-    - [Rating a venue](#rating-a-venue)
   - [As a dog owner](#as-a-dog-owner)
     - [Adding your dog to Dog for a Day](#adding-your-dog-to-Dog-for-a-Day)
 - [Project Status](#project-status)
